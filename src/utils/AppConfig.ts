@@ -2,7 +2,7 @@
 
 export const AppConfig = {
   site_name: 'LewBook',
-  title: 'LewBook, social experience',
+  title: 'LewBook',
   description: 'A very original social media website',
   locale: 'en',
 };

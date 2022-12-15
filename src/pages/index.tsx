@@ -11,7 +11,8 @@ const Index = () => {
         />
       }
     >
-      <p>lehar</p>
+      <h1 className="text-2xl">All Recent Posts</h1>
+      <p>All Recent Posts</p>
     </Main>
   );
 };

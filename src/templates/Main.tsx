@@ -13,17 +13,21 @@ const Main = (props: IMainProps) => (
     {props.meta}
     <div className="w-screen">
       <div className="flex flex-wrap items-stretch gap-y-5 border-b-2 border-purple-600 px-5">
-        <div className="grow">
-          <div className="text-3xl font-bold text-gray-900">
-            {AppConfig.title}
+        <div className="flex grow py-2">
+          <div className="flex">
+            <img className="mr-2 w-12" src="/Book.svg" alt="An SVG of an eye" />
+            <div>
+              <div className="text-3xl font-bold text-gray-900">
+                {AppConfig.title}
+              </div>
+            </div>
           </div>
-          <div className="text-xl">{AppConfig.description}</div>
         </div>
-        <div className="flex flex-wrap items-stretch">
+        <div className="ml-4 flex flex-wrap items-stretch">
           <div className="mr-6 flex flex-wrap items-center text-xl">
             <Link href="/about/">About</Link>
           </div>
-          <ul className="flex flex-wrap items-center border-l-4 border-l-purple-500 pl-5 text-xl">
+          <ul className="flex flex-wrap items-center border-l-8 border-l-purple-500 pl-5 text-xl">
             <li className="mr-6">
               <Link href="/">Home</Link>
             </li>
@@ -38,7 +42,7 @@ const Main = (props: IMainProps) => (
       </div>
     </div>
     <div className="mx-auto max-w-screen-md px-5">
-      <div className="content py-5 text-xl">{props.children}</div>
+      <div className="content py-5">{props.children}</div>
       <div className="border-t border-gray-300 py-8 text-center text-sm">
         © Copyright {new Date().getFullYear()} {AppConfig.title}.
       </div>
