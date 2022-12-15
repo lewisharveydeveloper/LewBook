@@ -6,6 +6,7 @@ a {
 
 a:hover {
   @apply border-b-2 border-purple-700 text-purple-700;
+  margin-bottom: -2px;
 }
 
 @tailwind components;
@@ -18,4 +19,8 @@ a:hover {
 
 .content ul {
   @apply my-6;
+}
+
+.content {
+  white-space: pre;
 }
