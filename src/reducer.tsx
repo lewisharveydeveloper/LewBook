@@ -1,5 +1,6 @@
 import type { AnyAction } from '@reduxjs/toolkit';
 
+// lehar this needs to be null, and fetch state
 const HomePageState = {
   Posts: [
     {

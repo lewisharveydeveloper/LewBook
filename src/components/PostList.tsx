@@ -4,6 +4,7 @@ import { Post } from './Post';
 
 const selectPosts = (state: any) => state.Posts;
 
+// lehar started using any, change to strict typing
 const PostList = () => {
   const posts = useSelector(selectPosts);
   return (
