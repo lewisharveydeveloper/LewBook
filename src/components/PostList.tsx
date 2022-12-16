@@ -1,25 +1,14 @@
+import { useSelector } from 'react-redux';
+
 import { Post } from './Post';
 
-type IPostProps = {
-  fullName: string;
-  postText: string;
-  likes: Array<IPersonRef>;
-  profilePicLink: string;
-};
+const selectPosts = (state: any) => state.Posts;
 
-type IPersonRef = {
-  fullName: string;
-  href: string;
-};
-
-type PostListProps = {
-  posts: IPostProps[];
-};
-
-const PostList = ({ posts }: PostListProps) => {
+const PostList = () => {
+  const posts = useSelector(selectPosts);
   return (
     <>
-      {posts.map((post, index) => {
+      {posts.map((post: any, index: any) => {
         return (
           <Post
             key={index}
