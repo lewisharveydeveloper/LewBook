@@ -1,16 +1,6 @@
 import React from 'react';
 
-type IPostProps = {
-  fullName: string;
-  postText: string;
-  likes: Array<IPersonRef>;
-  profilePicLink: string;
-};
-
-type IPersonRef = {
-  fullName: string;
-  href: string;
-};
+import type { IPostProps } from '../types';
 
 const Post = (props: IPostProps) => {
   // lehar, this needs to be changed to the current users name
@@ -23,7 +13,10 @@ const Post = (props: IPostProps) => {
           alt="profile pic"
           src={props.profilePicLink}
         ></img>
-        <span className="ml-5 text-lg sm:text-2xl">{props.fullName}</span>
+        <span className="ml-5 text-lg sm:text-2xl">
+          {props.firstName} {props.lastName}
+        </span>
+        <span className="ml-5 text-lg sm:text-lg">{props.createdAt}</span>
       </div>
       <p className="text-xl">{props.postText}</p>
       <div className="flex items-center">

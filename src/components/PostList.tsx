@@ -1,25 +1,25 @@
-import { useSelector } from 'react-redux';
+import type { IPostProps } from '@/types';
 
 import { Post } from './Post';
 
-const selectPosts = (state: any) => state.Posts;
-
-// lehar started using any, change to strict typing
-const PostList = () => {
-  const posts = useSelector(selectPosts);
+const PostList = ({ posts }: { posts: Array<IPostProps> }) => {
   return (
     <>
-      {posts.map((post: any, index: any) => {
-        return (
-          <Post
-            key={index}
-            fullName={post.fullName}
-            postText={post.postText}
-            profilePicLink={post.profilePicLink}
-            likes={post.likes}
-          ></Post>
-        );
-      })}
+      {posts &&
+        posts.map((post: IPostProps, index: number) => {
+          return (
+            <Post
+              key={index}
+              createdAt={post.createdAt}
+              firstName={post.firstName}
+              lastName={post.lastName}
+              postText={post.postText}
+              profilePicLink={post.profilePicLink}
+              likes={post.likes}
+            ></Post>
+          );
+        })}
+      <span>test</span>
     </>
   );
 };

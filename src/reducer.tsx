@@ -4,13 +4,17 @@ import type { AnyAction } from '@reduxjs/toolkit';
 const HomePageState = {
   Posts: [
     {
-      fullName: 'Lewis Harvey',
+      createdAt: '2023-01-06T16:25:04.903Z',
+      firstName: 'Lewis',
+      lastName: 'Harvey',
       postText: 'this is some post text',
       profilePicLink: 'https://placekitten.com/60/60',
       likes: [{ fullName: 'John Smith', href: 'google.com' }],
     },
     {
-      fullName: 'John Smith',
+      createdAt: '2023-01-06T16:25:04.903Z',
+      firstName: 'John',
+      lastName: 'Smith',
       postText: 'hello world!',
       profilePicLink: 'https://placekitten.com/70/70',
       likes: [{ fullName: 'Sammy Samson', href: 'google.com' }],

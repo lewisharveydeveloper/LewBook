@@ -27,7 +27,7 @@ const Main = (props: IMainProps) => (
           <div className="mr-6 flex flex-wrap items-center text-xl">
             <Link href="/about/">About</Link>
           </div>
-          <ul className="flex flex-wrap items-center border-l-8 border-l-purple-500 pl-5 text-xl">
+          <ul className="flex flex-wrap items-center border-l-4 border-l-purple-500 pl-5 text-xl">
             <li className="mr-6">
               <Link href="/">Home</Link>
             </li>
